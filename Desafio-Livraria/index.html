@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catálogo - Livraria Orcrux</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/atomic/molecules/book-card.css">
+  <link rel="stylesheet" href="css/atomic/organisms/catalog-grid.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Livraria Orcrux</h1>
+      <nav><a href="admin.html" id="admin-link">Área Administrativa</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="busca" placeholder="Buscar por título ou autor" />
+      <select id="ordenar">
+        <option value="">Ordenar por</option>
+        <option value="precoCrescente">Preço Crescente</option>
+        <option value="precoDecrescente">Preço Decrescente</option>
+      </select>
+      <button id="limpar" class="btn">Limpar</button>
+    </section>
+
+    <section id="catalogo" class="catalog-grid" aria-live="polite">
+      <!-- sem livros inicialmente -->
+      <p class="empty">Nenhum livro cadastrado. Acesse a área administrativa para adicionar livros.</p>
+    </section>
+  </main>
+
+  <script type="module" src="js/catalogo.js"></script>
+</body>
+</html>
